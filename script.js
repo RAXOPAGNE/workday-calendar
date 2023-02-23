@@ -55,6 +55,18 @@ function onSaveTask(e) {
 
     localStorage.setItem(hour,Task);
     console.log('saved')
+}
 
+function generateTimeallocations() {
+    for (var hour = options.startHour; hour <= options.endHour; hour++) {
+
+        var savedTask = localStorage.getItem(hour);
+
+        var timeAllocation = $('<div>').addClass('row time-block');
+        timeAllocation.attr('data-hour', hour);
+
+        var hourAllocation = $('<div>').addClass('col-sm-2hour').text(moment(hour, 'h').format('h A'));
+        
+    }
 }
 
